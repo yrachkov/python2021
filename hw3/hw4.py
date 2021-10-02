@@ -1,9 +1,11 @@
-def a(lst):
-    l = len(lst)
-    if l > 1:
-        mid = l // 2
-        m1 = a(lst[:mid])
-        m2 = a(lst[mid:])
+def a(s,h):
+    if s > 1:
+        mid = s // 2
+        m1 = a(s)
+        m2 = a(h)
         return m1 if m1 < m2 else m2
-    return lst[0]
-print(a())
+    return s[0]
+
+f = int(input(":"))
+g = int(input(":"))
+print(a(f,g))
